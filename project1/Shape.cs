@@ -4,17 +4,26 @@ namespace Project1
 {
     class Shape
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            Console.WriteLine("Enter Width: ");
-            string userInputWidth = Console.ReadLine(); 
-            Console.WriteLine("Enter Length: ");
-            string userInputLength = Console.ReadLine();
-            int width = Convert.ToInt32(userInputWidth);
-            int length = Convert.ToInt32(userInputLength);
-            int perimeter = width + width + length + length;
-            Console.WriteLine();
-            Console.WriteLine("The perimeter is {0}", perimeter);
+            string userInputWidth;
+            string userInputLength;
+            int width;
+            int length;
+            int perimeter;
+
+
+            Console.Write("Enter Width: ");
+            userInputWidth = Console.ReadLine(); 
+           
+            Console.Write("Enter Length: ");
+            userInputLength = Console.ReadLine();
+
+            width = Convert.ToInt32(userInputWidth);
+            length = Convert.ToInt32(userInputLength);
+            perimeter = width + width + length + length;
+         
+            Console.Write("The perimeter is {0}", perimeter);
         }
     }
 }
