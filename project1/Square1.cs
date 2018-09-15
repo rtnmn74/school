@@ -6,12 +6,13 @@ namespace Project1
         public static void Main(string[] args)
         {
             string userInputWidth;
-            string userInputLength;
+            string userInputHeight;
             int width;
-            int length;
+            int height;
             int perimeter;
+            int area;
 
-            /*Take user input for shape width */
+            /*Take user input for width */
             Console.Write("Enter Width: ");
             userInputWidth = Console.ReadLine();
             /*Convert user input string to integer for calculating */
@@ -19,17 +20,22 @@ namespace Project1
             /*Output user input for width */
             Console.WriteLine("You Entered {0}", width); 
 
-           /*Take user inpout for shape length */
-            Console.Write("Enter Length: ");
-            userInputLength = Console.ReadLine();
+           /*Take user input for height */
+            Console.Write("Enter Height: ");
+            userInputHeight = Console.ReadLine();
             /*Convert user input strings to integers for calculating */
-            length = Convert.ToInt32(userInputLength);
-            /*Output user input length*/
-            Console.WriteLine("You entered {0}", length);
+            height = Convert.ToInt32(userInputHeight);
+            /*Output user input height*/
+            Console.WriteLine("You entered {0}", height);
 
-            /*Calculate the perimeter of the shape length and width inputs */
-            perimeter = width + width + length + length;
-            
+            /*Calculate the perimeter of the height and width inputs */
+            perimeter = width + width + height + height;
+
+            /*Calculate the area of the inputs  */
+            If height = width then
+            area = height * height
+            else null;
+
             /* Output the perimeter of the shape based on the inputs */
             Console.WriteLine("The perimeter is {0}", perimeter);
         }
