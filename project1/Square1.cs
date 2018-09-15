@@ -2,8 +2,7 @@
 
 namespace Project1
 {
-    class Shape
-    {
+    class Square1    {
         public static void Main(string[] args)
         {
             string userInputWidth;
