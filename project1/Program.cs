@@ -1,4 +1,5 @@
 ﻿using System;
+using NUnit.Framework;
 
 namespace Project1
 {
@@ -33,23 +34,26 @@ namespace Project1
         }
     }   
 
-
-    static void Test ( string[ ] args )
-    {
-       //* test square */
+[TestFixture]
+class Test
+{
+       [Test]
+       public void testSquare()
+       {
         Square1 square = new Square1(50, 50);
-        Console.WriteLine ("The area of the square is {0}", square.computeArea());
-        Console.WriteLine ("The perimater of the square is {0}", square.computePerimeter());
-
-        //* test rectangle */
+        Assert.That(square.area, Is.EqualTo(2500));
+        Assert.That(square.perimeter, Is.EqualTo(200));
+       }
+       [Test]
+        public void testRectangle()
+        {
         Rectangle1 rectangle = new Rectangle1(150, 50);
-        Console.WriteLine ("The area of the rectangle is {0}", rectangle.computeArea());
-        Console.WriteLine ("The perimater of the rectangle is {0}", rectangle.computePerimeter());
-        
-
-         
+        Assert.That(rectangle.area, Is.EqualTo(7500));
+        Assert.That(rectangle.perimeter, Is.EqualTo(400));
+        }
+}
     
-    }
+    
    }
 
 }
