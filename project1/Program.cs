@@ -14,6 +14,8 @@ namespace Project1
         {
             width = inputWidth;
             height = inputHeight;
+            computeArea();
+            computePerimeter();
         } 
         public int computeArea()
         {
@@ -28,23 +30,24 @@ namespace Project1
     {
         public Square1(int inputWidth, int inputHeight) : base (inputWidth, inputHeight)
         {
-        
-        computeArea();
-        computePerimeter();
+            width = inputWidth;
+            height = inputHeight; 
+            computeArea();
+            computePerimeter();
         }
     }   
 
 [TestFixture]
 class Test
 {
-       [Test]
+       [TestCase]
        public void testSquare()
        {
         Square1 square = new Square1(50, 50);
         Assert.That(square.area, Is.EqualTo(2500));
         Assert.That(square.perimeter, Is.EqualTo(200));
        }
-       [Test]
+       [TestCase]
         public void testRectangle()
         {
         Rectangle1 rectangle = new Rectangle1(150, 50);
