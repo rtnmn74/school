@@ -1,5 +1,6 @@
 ﻿using System;
 
+
 namespace Project1
 {
     class Rectangle1 
@@ -36,7 +37,7 @@ namespace Project1
     static void Main ( string[ ] args )
     {
        //* input square */
-        Square1 square = new Square1(inputWidth, );
+        Square1 square = new Square1(50,50);
         Console.WriteLine ("The area of the square is {0}", square.calculateArea());
         Console.WriteLine ("The perimater of the square is {0}", square.calculatePerimeter());
 
