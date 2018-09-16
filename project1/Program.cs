@@ -4,43 +4,47 @@ namespace Project1
 {
     class Rectangle1 
     {
-        int shapeWidth; 
-        int shapeHeight;
+        int width; 
+        int height;
+        int area;
+        int perimeter;
 
-        public Rectangle1(int width, int height)
+        public Rectangle1(int inputWidth, int inputHeight)
         {
-            shapeWidth = width;
-            shapeHeight = height;
+            width = inputWidth;
+            height = inputHeight;
         } 
-        public int area()
+        public int computeArea()
         {
-        return shapeWidth * shapeHeight;
+        return area = width * height;
         }
-        public int perimeter()
+        public int computePerimeter()
         {
-         return shapeWidth + shapeWidth + shapeHeight + shapeHeight;
+         return perimeter = width + width + height + height;
         }
    
     class Square1 : Rectangle1
     {
-        public Square1(int width, int height) : base (width, height)
+        public Square1(int inputWidth, int inputHeight) : base (inputWidth, inputHeight)
         {
-        area();
-        perimeter();
+        
+        computeArea();
+        computePerimeter();
         }
     }   
+
 
     static void Test ( string[ ] args )
     {
        //* test square */
         Square1 square = new Square1(50, 50);
-        Console.WriteLine ("The area of the square is {0}", square.area());
-        Console.WriteLine ("The perimater of the square is {0}", square.perimeter());
+        Console.WriteLine ("The area of the square is {0}", square.computeArea());
+        Console.WriteLine ("The perimater of the square is {0}", square.computePerimeter());
 
         //* test rectangle */
         Rectangle1 rectangle = new Rectangle1(150, 50);
-        Console.WriteLine ("The area of the rectangle is {0}", rectangle.area());
-        Console.WriteLine ("The perimater of the rectangle is {0}", rectangle.perimeter());
+        Console.WriteLine ("The area of the rectangle is {0}", rectangle.computeArea());
+        Console.WriteLine ("The perimater of the rectangle is {0}", rectangle.computePerimeter());
         
 
          
