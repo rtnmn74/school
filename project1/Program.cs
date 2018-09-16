@@ -1,51 +1,50 @@
 ﻿using System;
 
-
 namespace Project1
 {
     class Rectangle1 
     {
-        int width; 
-        int height;
-        
-        public Rectangle1(int inputWidth, int inputHeight)
+        int shapeWidth; 
+        int shapeHeight;
+
+        public Rectangle1(int width, int height)
         {
-            width = inputWidth;
-            height = inputHeight;    
+            shapeWidth = width;
+            shapeHeight = height;
         } 
-        /* calulate area */
-        public int calculateArea()
+        public int area()
         {
-        return width * height;
+        return shapeWidth * shapeHeight;
         }
-        /* calcuate perimeter */
-        public int calculatePerimeter()
+        public int perimeter()
         {
-         return width + width + height + height;
+         return shapeWidth + shapeWidth + shapeHeight + shapeHeight;
         }
    
     class Square1 : Rectangle1
     {
-        public Square1(int inputWidth, int inputHeight) : base (inputWidth, inputHeight)
+        public Square1(int width, int height) : base (width, height)
         {
-        calculateArea();
-        calculatePerimeter();
+        area();
+        perimeter();
         }
     }   
 
-
-    static void Main ( string[ ] args )
+    static void Test ( string[ ] args )
     {
-       //* input square */
-        Square1 square = new Square1(50,50);
-        Console.WriteLine ("The area of the square is {0}", square.calculateArea());
-        Console.WriteLine ("The perimater of the square is {0}", square.calculatePerimeter());
+       //* test square */
+        Square1 square = new Square1(50, 50);
+        Console.WriteLine ("The area of the square is {0}", square.area());
+        Console.WriteLine ("The perimater of the square is {0}", square.perimeter());
 
-        //* input rectangle */
+        //* test rectangle */
         Rectangle1 rectangle = new Rectangle1(150, 50);
-        Console.WriteLine ("The area of the rectangle is {0}", rectangle.calculateArea());
-        Console.WriteLine ("The perimater of the rectangle is {0}", rectangle.calculatePerimeter());
+        Console.WriteLine ("The area of the rectangle is {0}", rectangle.area());
+        Console.WriteLine ("The perimater of the rectangle is {0}", rectangle.perimeter());
         
+
+         
+    
     }
    }
 
