@@ -1,5 +1,5 @@
 ﻿using System;
-
+using NUnit.Framework;
 
 namespace Project1
 {
@@ -7,46 +7,98 @@ namespace Project1
     {
         int width; 
         int height;
-        
-        public Rectangle1(int inputWidth, int inputHeight)
-        {
-            width = inputWidth;
-            height = inputHeight;    
-        } 
-        /* calulate area */
-        public int calculateArea()
+
+        public int computeArea(int width, int height)
         {
         return width * height;
         }
-        /* calcuate perimeter */
-        public int calculatePerimeter()
+        public int computePerimeter(int width, int height)
         {
          return width + width + height + height;
+        }
+        public Rectangle1()
+        {
+            computeArea(width, height);
+            computePerimeter(width, height);
         }
    
     class Square1 : Rectangle1
     {
-        public Square1(int inputWidth, int inputHeight) : base (inputWidth, inputHeight)
+        public Square1()
         {
-        calculateArea();
-        calculatePerimeter();
+            computeArea(width, height);
+            computePerimeter(width, height);
         }
     }   
 
-
-    static void Main ( string[ ] args )
+[TestFixture]
+class RectangleAreaTest
     {
-       //* input square */
-        Square1 square = new Square1(50,50);
-        Console.WriteLine ("The area of the square is {0}", square.calculateArea());
-        Console.WriteLine ("The perimater of the square is {0}", square.calculatePerimeter());
+        [Test]
+        public void testRectangleArea()
+        {
+        /* Given new rectangle compute the area */
+        var rectangle = new Rectangle1();
 
-        //* input rectangle */
-        Rectangle1 rectangle = new Rectangle1(150, 50);
-        Console.WriteLine ("The area of the rectangle is {0}", rectangle.calculateArea());
-        Console.WriteLine ("The perimater of the rectangle is {0}", rectangle.calculatePerimeter());
-        
+        /* Compute the area of 150 and 50 */
+        var returnValue = rectangle.computeArea(150,50);
+
+        /* The area of 150 and 50 should be 7500 */
+        Assert.That(returnValue, Is.EqualTo(7500));
+        }
+
+class RectanglePerimeterTest
+    {
+        [Test]
+        public void testRectanglePerimeter()
+        {
+        /* Given new rectangle compute the perimeter */
+        var rectangle = new Rectangle1();
+
+        /* Compute the perimter of 150 and 50 */
+        var returnValue = rectangle.computePerimeter(150,50);
+
+        /* The perimeter of 150 and 50 should be 400 */
+        Assert.That(returnValue, Is.EqualTo(400));
+        }
+
+     }
+     class SquareAreaTest
+    {
+        [Test]
+        public void testSquareArea()
+        {
+        /* Given new square compute the area */
+        var square = new Square1();
+
+        /* Compute the area of 50 and 50 */
+        var returnValue = square.computeArea(50,50);
+
+        /* The area of 50 and 50 should be 2000 */
+        Assert.That(returnValue, Is.EqualTo(2500));
+        }
+
+class SquarePerimeterTest
+    {
+        [Test]
+        public void testSquarePerimeter()
+        {
+        /* Given new square compute the perimeter */
+        var square = new Square1();
+
+        /* Compute the perimter of 50 and 50 */
+        var returnValue = square.computePerimeter(50,50);
+
+        /* The perimeter of 50 and 50 should be 200 */
+        Assert.That(returnValue, Is.EqualTo(200));
+        }
+
+     }
+
+
+}
     }
+    
    }
 
 }
