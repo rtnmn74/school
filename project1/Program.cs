@@ -5,29 +5,68 @@ namespace Project1
 {
     class Rectangle1 
     {
-        int width; 
-        int height;
+        /* Properties for rectangle*/
+        protected int Width {get; set; } 
+        protected int Length {get; set; }
+        
+        /* Contructor for a rectangle */
+        public Rectangle1(int width, int length)
+        {
+            this.Width = width;
+            this.Length = length;
 
-        public int computeArea(int width, int height)
-        {
-        return width * height;
+           /* if (width != length)
+            {
+            throw new ArgumentException ("Width and length should not match. Please re-enter width and length.");    
+            }
+            else
+            { 
+            /* Call computeArea routine */
+            /* computeArea(width, length);
+            /* Call computePerimeter routine */
+            /* computePerimeter(width, length);
+            }
+            */
         }
-        public int computePerimeter(int width, int height)
+
+        /* Routing that computes the area of a shape with 4 sides */
+        public int computeArea()
         {
-         return width + width + height + height;
+        /* Return area of a shape with 4 sides by multiplying the width x length */
+        return this.Width * this.Length;
         }
-        public Rectangle1()
+
+        /* Routine that computes the perimeter of a shape with 4 sides */
+        public int computePerimeter()
         {
-            computeArea(width, height);
-            computePerimeter(width, height);
+         /* Return the perimeter of a shape with 4 sides by adding the value of all sides */
+         return this.Width + this.Width + this.Length + this.Length;
         }
-   
+
+
+
     class Square1 : Rectangle1
     {
-        public Square1()
+        
+        public Square1() { }
+
+        /* Contructor for a square */
+        public Square1(int width, int length)
         {
-            computeArea(width, height);
-            computePerimeter(width, height);
+            this.Width = width ;
+            this.Length = bot;
+
+
+            if (leftSide == bottomSide) 
+            {
+            /* Call computeArea routine */
+            computeArea(leftSide, bottomSide);
+            /* Call computePerimeter routine */
+            computePerimeter(leftSide, bottomSide);
+            } else
+            {
+             Console.WriteLine ("Left side and the bottomSide should match. Please re-enter width and length.");   
+            }
         }
     }   
 
@@ -63,7 +102,7 @@ class RectanglePerimeterTest
         }
 
      }
-     class SquareAreaTest
+class SquareAreaTest
     {
         [Test]
         public void testSquareArea()
@@ -72,7 +111,7 @@ class RectanglePerimeterTest
         var square = new Square1();
 
         /* Compute the area of 50 and 50 */
-        var returnValue = square.computeArea(50,50);
+        var returnValue = square.computeArea(51,50);
 
         /* The area of 50 and 50 should be 2000 */
         Assert.That(returnValue, Is.EqualTo(2500));
@@ -93,12 +132,12 @@ class SquarePerimeterTest
         Assert.That(returnValue, Is.EqualTo(200));
         }
 
-     }
+    }
 
 
-}
+    }
     }
     
-   }
+    }
 
 }
