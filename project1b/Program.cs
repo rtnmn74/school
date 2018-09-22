@@ -46,29 +46,16 @@ namespace Project1 {
 
         /* Routine that computes the area of a rectangle */
         public override int computeArea ()
-        /* Return arear of the rectangle if the width and length are equal */
-        /* Throw and exception if the width and length are not equal */
-        {
-            if (Width == Length) {
-                throw new System.ArgumentException ("Rectangle width and length values cannot match", "rectangle.Width and rectangle.Length");
-            } else
             /* Return the area of a rectangle by multplying the width x the length */
             {
                 return Width * Length;
             }
 
-        }
         /* Routine that computes the area of a rectangle */
-        public override int computePerimeter () {
-            /* Return arear of the rectangle if the width and length are equal */
-            /* Throw and exception if the width and length are not equal */
-            if (Width == Length) {
-                throw new System.ArgumentException ("Rectangle width and length values cannot match", "rectangle.Width and rectangle.Length");
-            } else
+        public override int computePerimeter () 
             /* Return the perimeter of a rectangle by adding the 2 times the width with 2 times the length */
             {
                 return Width + Width + Length + Length;
-            }
         }
 
     }
@@ -126,35 +113,6 @@ namespace Project1 {
 
                 /* The perimeter calculation of 50 and 50 should be 200 */
                 Assert.That (result, Is.EqualTo (200));
-            }
-
-        }
-
-        class RectangleAreaExceptionTest {
-            [Test]
-            public void testRectangleAreaException () {
-                /* Given new rectangle with a width of 50 and a length of 50, compute the area */
-                var rectangle = new Rectangle2 ();
-                rectangle.Width = 50;
-                rectangle.Length = 50;
-
-                /* The area calcualtion of 50 and 50 should throw an exception */
-                var ex = Assert.Throws<System.ArgumentException> (() => rectangle.computeArea ());
-                Assert.That (ex.Message, Is.EqualTo ("Rectangle width and length values cannot match\r\nParameter name: rectangle.Width and rectangle.Length"));
-            }
-
-        }
-        class RectanglePerimeterExceptionTest {
-            [Test]
-            public void testRectanglePerimeterException () {
-                /* Given new rectangle with a width of 50 and a length of 50, compute the perimeter */
-                var rectangle = new Rectangle2 ();
-                rectangle.Width = 50;
-                rectangle.Length = 50;
-
-                /* The perimeter calcualtion of 50 and 50 should throw an exception */
-                var ex = Assert.Throws<System.ArgumentException> (() => rectangle.computePerimeter ());
-                Assert.That (ex.Message, Is.EqualTo ("Rectangle width and length values cannot match\r\nParameter name: rectangle.Width and rectangle.Length"));
             }
 
         }
