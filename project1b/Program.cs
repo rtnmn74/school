@@ -5,8 +5,8 @@ namespace Project1 {
     /* Class for Square2 */
     class Square2 {
         /* Parameters for a shape with 4 sides */
-        public int width;
-        public int length;
+       protected int width;
+       protected int length;
 
         /*Contructor for a square */
         public Square2 (int width, int length) {

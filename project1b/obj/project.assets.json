@@ -5669,11 +5669,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\rthomas\\source\\repos\\school\\project1a\\project1.csproj",
+      "projectUniqueName": "c:\\Users\\rthomas\\source\\repos\\school\\project1b\\project1.csproj",
       "projectName": "project1",
-      "projectPath": "c:\\Users\\rthomas\\source\\repos\\school\\project1a\\project1.csproj",
+      "projectPath": "c:\\Users\\rthomas\\source\\repos\\school\\project1b\\project1.csproj",
       "packagesPath": "C:\\Users\\rthomas\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\rthomas\\source\\repos\\school\\project1a\\obj\\",
+      "outputPath": "c:\\Users\\rthomas\\source\\repos\\school\\project1b\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
