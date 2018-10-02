@@ -46,16 +46,16 @@ namespace Project1 {
 
         /* Routine that computes the area of a rectangle */
         public override int computeArea ()
-            /* Return the area of a rectangle by multplying the width x the length */
-            {
-                return Width * Length;
-            }
+        /* Return the area of a rectangle by multplying the width x the length */
+        {
+            return Width * Length;
+        }
 
         /* Routine that computes the area of a rectangle */
-        public override int computePerimeter () 
-            /* Return the perimeter of a rectangle by adding the 2 times the width with 2 times the length */
-            {
-                return Width + Width + Length + Length;
+        public override int computePerimeter ()
+        /* Return the perimeter of a rectangle by adding the 2 times the width with 2 times the length */
+        {
+            return Width + Width + Length + Length;
         }
 
     }
