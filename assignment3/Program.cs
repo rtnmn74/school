@@ -3,8 +3,10 @@ using System;
 namespace assignment3 {
     class Program {
         static void Main (string[] args) {
-            var account = new BankAccount ("John Smith", 1000);
-            Console.WriteLine ($"Account {account.AccountNumber} was created for {account.AccountHolder} with {account.Balance} opening balance.");
+            var account1 = new BankAccount (15, 500, 200);
+            Console.WriteLine ($"Account {account1.AccountNumber} has ${account1.Balance} in the account.");
+            var account2 = new BankAccount (16, 400, 20);
+            Console.WriteLine ($"Account {account2.AccountNumber} has ${account2.Balance} in the account.");
         }
-    }
+    }   
 }
