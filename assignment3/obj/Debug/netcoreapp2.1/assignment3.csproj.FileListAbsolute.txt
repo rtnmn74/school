@@ -9,3 +9,7 @@ c:\Users\rthomas\source\repos\school\assignment3\obj\Debug\netcoreapp2.1\assignm
 c:\Users\rthomas\source\repos\school\assignment3\obj\Debug\netcoreapp2.1\assignment3.AssemblyInfo.cs
 c:\Users\rthomas\source\repos\school\assignment3\obj\Debug\netcoreapp2.1\assignment3.dll
 c:\Users\rthomas\source\repos\school\assignment3\obj\Debug\netcoreapp2.1\assignment3.pdb
+C:\Users\rthomas\source\repos\school\assignment3\bin\Debug\netcoreapp2.1\NUnit3.TestAdapter.dll
+C:\Users\rthomas\source\repos\school\assignment3\bin\Debug\netcoreapp2.1\NUnit3.TestAdapter.pdb
+C:\Users\rthomas\source\repos\school\assignment3\bin\Debug\netcoreapp2.1\nunit.engine.netstandard.dll
+C:\Users\rthomas\source\repos\school\assignment3\bin\Debug\netcoreapp2.1\Mono.Cecil.dll
