@@ -1,16 +1,16 @@
 ﻿using System;
 
 namespace assignment3 {
-    class BankAccount : ICloneable {
- 
+    class BankAccount {
+
         public int AccountNumber { get; set; }
         public decimal Balance { get; protected set; }
 
         public void Deposit (decimal amount) {
-         Balance = Balance + amount;
+            Balance = Balance + amount;
         }
         public void Withdraw (decimal amount) {
-         Balance = Balance - amount;  
+            Balance = Balance - amount;
         }
         public decimal ReturnBalance () {
             return Balance;
@@ -19,22 +19,22 @@ namespace assignment3 {
         public BankAccount (int accountNumber) {
             AccountNumber = accountNumber;
         }
-        public object Clone () {
-            return new BankAccount(AccountNumber);
+        public BankAccount Clone () {
+            var obj = (BankAccount) this.MemberwiseClone ();
+            return obj;
         }
 
-    //    public override bool Equals (object obj) {
-    //        if ((obj == null) || !GetType ().Equals (obj.GetType ())) {
-    //            return false;
-    //        } else {
-    //            BankAccount otherBalance = (BankAccount) obj;
-    //            return (Balance == otherBalance.Balance);
-    //        }
+        public override bool Equals (object obj) {
+            var item = obj as BankAccount;
 
-    //    }
+            if (item == null) {
+                return false;
+            }
+            return this.Balance.Equals (item.Balance);
+        }
 
-    //    public override int GetHashCode () {
-    //        return Balance.GetHashCode ();
-    //    
+        public override int GetHashCode () {
+            return Balance.GetHashCode ();
+        }
     }
 }
