@@ -10,9 +10,14 @@ namespace assignment3 {
             Balance = Balance + amount;
         }
         public void Withdraw (decimal amount) {
-            Balance = Balance - amount;
+            if(Balance < amount)
+            {
+            throw new Exception(string.Format("You do not have enough money in your account"));
         }
-        public decimal ReturnBalance () {
+            Balance = Balance - amount;
+            
+        }
+        public decimal checkBalance () {
             return Balance;
         }
 
