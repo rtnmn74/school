@@ -6,20 +6,26 @@ namespace assignment3 {
     public class BankAccountTests {
         [TestCase]
         /* Test the withdraw method by withdawing 0*/
-        public void withDrawTest () {
+        public void withDrawZeroTest () {
             /* Contruct new account with account number 1000 */
             BankAccount account0 = new BankAccount (1000);
+            /* Deposit 100.00 */
+            account0.Deposit (100.00m);
+            /* Withdraw 0.00 */
             account0.Withdraw (0.00m);
+            /* Return account balance */
             var result = account0.checkBalance ();
-            /* The balance is 0.00*/
-            Assert.That (result, Is.EqualTo (0.00m));
+            /* Assert that the balance is 100.00*/
+            Assert.That (result, Is.EqualTo (100.00m));
         }
         [TestCase]
         /* Test the deposit method by depositing 200 */
         public void depositTest () {
             /* Contruct new account with account number 1001 */
             BankAccount account1 = new BankAccount (1001);
+            /* Deposit 200.90 */
             account1.Deposit (200.90m);
+            /* Return account balance */
             var result = account1.checkBalance ();
             /* Assert that the balance is 200.90 */
             Assert.That (result, Is.EqualTo (200.90m));
@@ -34,6 +40,7 @@ namespace assignment3 {
             account2.Deposit (200.03m);
             /* Withdraw 100.01 */
             account2.Withdraw (100.02m);
+            /* Return account balance */
             var result = account2.checkBalance ();
             /* Assert that the balance is 100.01 */
             Assert.That (result, Is.EqualTo (100.01m));
@@ -48,9 +55,13 @@ namespace assignment3 {
             account3.Deposit (200.00m);
             /* Withdraw 100.00 */
             account3.Withdraw (100.00m);
+            /* Construct another new account with account number 1400 */
             BankAccount account4 = new BankAccount (1400);
+            /* Deposit 200.00 */
             account4.Deposit (200.00m);
+            /* Witdraw 100.00 */
             account4.Withdraw (100.00m);
+            /* Return account balance */
             var result = account3.Equals (account4);
             /* Asser that the 2 account balances match */
             Assert.That (result, Is.True);

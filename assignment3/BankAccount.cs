@@ -17,7 +17,7 @@ namespace assignment3 {
                 /* Add deposit amount of zero to account balance */
                 Balance = Balance + 0;
             } else
-                /* Add deposit amount to account balance */
+                /* Add deposit amount to account balance to become the new account balance */
                 Balance = Balance + amount;
         }
         /* Method for a withdrawal transaction*/
@@ -30,7 +30,7 @@ namespace assignment3 {
                 /* Substract withdrawal amount of zero from the account balance */
                 Balance = Balance - 0;
             } else
-                /* Subtract withdrawal amount from account balance */
+                /* Subtract withdrawal amount from account balance to become the new account balance*/
                 Balance = Balance - amount;
         }
         /* Method to return the account balance */
@@ -40,6 +40,7 @@ namespace assignment3 {
         }
         /* Contructor for a new bank account */
         public BankAccount (int accountNumber) {
+            /*Input accountNumber interger into AccountNumber field */
             AccountNumber = accountNumber;
         }
         /* Method that allows the ability to clone an an object  */
