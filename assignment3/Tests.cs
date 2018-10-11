@@ -81,7 +81,33 @@ namespace assignment3 {
             account7.Deposit (200.00m);
             /* Assert that the method throws the exception message when more than the deposit amount is withdrawn */
             var ex = Assert.Throws<System.Exception> (() => account7.Withdraw (201.00m));
-            Assert.That (ex.Message, Is.EqualTo ("You do not have enough money in your account"));
+            Assert.That (ex.Message, Is.EqualTo ("Withdrawal declined. You do not have enough money in your account"));
+        }
+        [TestCase]
+        /* Test the withdraw method returns zero when withdawing a negative amount*/
+        public void withdrawNegativeAmountTest () {
+            /* Contruct new account with account number 1900 */
+            BankAccount account8 = new BankAccount (1900);
+            /* Deposit 1.00 */
+            account8.Deposit (1.00m);
+            /* Withdraw negative 0.01 */
+            account8.Withdraw (-0.01m);
+            /* Return balance */
+            var result = account8.checkBalance ();
+            /* Assert that the balance is 1.00, since no deposit was 1.00 and withdrawal ammount defaults to zero with a negative amount*/
+            Assert.That (result, Is.EqualTo (1.00m));
+        }
+        [TestCase]
+        /* Test the deposit method returns zero by depositing negative amount*/
+        public void depositNegativeAmountTest () {
+            /* Contruct new account with account number 2000 */
+            BankAccount account9 = new BankAccount (2000);
+            /* Deposit negative 0.01 */
+            account9.Deposit (-0.01m);
+            /* Return balance */
+            var result = account9.checkBalance ();
+            /* Assert that the balance is 0.00 */
+            Assert.That (result, Is.EqualTo (0.00m));
         }
     }
 }
