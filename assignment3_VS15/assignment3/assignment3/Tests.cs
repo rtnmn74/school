@@ -102,7 +102,7 @@ namespace assignment3
         }
 
         [TestCase]
-        /* Test when a withdrawal is more then the balance */
+        /* Test withdrawal amount more then the balance */
         public void withdrawalMoreThanBalaneTest()
         {
             /* Construct new account with account number 1600 */
@@ -114,7 +114,7 @@ namespace assignment3
             Assert.That(ex.Message, Is.EqualTo("Precondition failed: amount < Balance  Withdrawal can not be more than the balance\r\nParameter name: Withdrawal can not be more than the balance"));
         }
         [TestCase]
-        /* Test the withdraw method returns zero when withdawing a negative amount*/
+        /* Test withdraw amount with a negative amount*/
         public void withdrawNegativeAmountTest()
         {
             /* Contruct new account with account number 1900 */
@@ -127,7 +127,7 @@ namespace assignment3
         }
 
         [TestCase]
-        /* Test the deposit method returns zero by depositing negative amount*/
+        /* Test deposit amount with a negative amount*/
         public void depositNegativeAmountTest()
         {
             /* Contruct new account with account number 2000 */

@@ -1,37 +1,38 @@
 ﻿using System;
+using System.Diagnostics.Contracts;
 
 namespace assignment3 {
     class BankAccount {
         /* Bank account feilds */
         public int AccountNumber { get; set; }
         public decimal Balance { get; protected set; }
+
         /* Varialbe with a static minimum deposit amount greater than 1 cent */
-        protected decimal minimumDeposit =>.01m;
+       /* protected decimal minimumDeposit =>.01m;
         /* Variable with a static minimum withdrawal amount greater than 1 cent */
-        protected decimal minimumWithdrawal =>.01m;
+        /* protected decimal minimumWithdrawal =>.01m;
+
 
         /* Method for a deposit transaction*/
         public void Deposit (decimal amount) {
-            /* Assume deposit amount is zero if deposit amount is less than 1 cent */
-            if (amount < minimumDeposit) {
-                /* Add deposit amount of zero to account balance */
-                Balance = Balance + 0;
-            } else
-                /* Add deposit amount to account balance to become the new account balance */
-                Balance = Balance + amount;
+            /* Require deposit amount to be more than zero */
+            Contract.Requires (amount > 0.00m);
+            /* Add deposit amount to account balance to become the new account balance */
+            Balance = Balance + amount;
+            Contract.Ensures (Balance == Contract.OldValue (Balance) + amount);
         }
         /* Method for a withdrawal transaction*/
         public void Withdraw (decimal amount) {
             /* Throw exception if the account balance is less than the amount to be withdrawn */
-            if (Balance < amount) {
-                throw new Exception (string.Format ("Withdrawal declined. You do not have enough money in your account"));
-                /* Assume the withdrawal amount is zero if the withdrawal amount is less than 1 cent*/
-            } else if (amount < minimumWithdrawal) {
-                /* Substract withdrawal amount of zero from the account balance */
-                Balance = Balance - 0;
-            } else
-                /* Subtract withdrawal amount from account balance to become the new account balance*/
-                Balance = Balance - amount;
+            Contract.Requires (Balance > amount);
+            /* Require withdrawal amount to be more than zero */
+            Contract.Requires (amount > 0.00m);
+
+            Balance = Balance - amount;
+            /* Substract withdrawal amount of zero from the account balance */
+            Contract.Ensures (Balance == Contract.OldValue (Balance) - amount);
+            /* Subtract withdrawal amount from account balance to become the new account balance*/
+
         }
         /* Method to return the account balance */
         public decimal checkBalance () {
