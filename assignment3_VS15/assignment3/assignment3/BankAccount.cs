@@ -12,10 +12,12 @@ namespace assignment3
         /* Method for a deposit transaction*/
         public decimal Deposit(decimal amount)
         {
-            /* Require deposit amount to be more than zero */
+            /* Precondition - Require deposit amount to be more than zero */
             Contract.Requires<ArgumentException>(amount > 0.00m, "Deposit must be greater than zero");
-            /* Ensure the method returns a balance greater than or equal to zero */
+            /* Postcondition - Ensures the method returns a balance greater than or equal to zero */
             Contract.Ensures(Balance >= 0.00m);
+            /* Postcondition - Ensures the method returns the Balance plus the amount */
+            Contract.Ensures(Balance == Contract.OldValue(Balance) + amount);
             /* Add deposit amount to account balance to become the new account balance */
             Balance += amount;
             /* Return the new balance */
@@ -25,12 +27,14 @@ namespace assignment3
         /* Method for a withdrawal transaction*/
         public decimal Withdraw(decimal amount)
         {
-            /* Require withdrawal amount to be more than account balance */
-            Contract.Requires<ArgumentException>(amount < Balance,"Withdrawal can not be more than the balance");
-            /* Require withdrawal amount to be more than zero */
+            /* Precondition - Requires withdrawal amount to be more than account balance */
+            Contract.Requires<ArgumentException>(amount < Balance, "Withdrawal can not be more than the balance");
+            /* Precondition - Requires withdrawal amount to be more than zero */
             Contract.Requires<ArgumentException>(amount > 0.00m, "Withdrawal must be greater than zero");
-            /* Ensure the method returns a balance greater that or equal to zero */
+            /* Postcondition - Ensures the method returns a balance greater that or equal to zero */
             Contract.Ensures(Balance >= 0.00m);
+            /* Postcondition - Ensures the method returns the Balance minus the amount */
+            Contract.Ensures(Balance == Contract.OldValue(Balance) - amount);
             /* Subtract withdrawal amount from account balance to become the new account balance*/
             Balance -= amount;
             /* Return the new Balance */
@@ -60,14 +64,11 @@ namespace assignment3
         /* Overide for the Equals method to compare account balances between multiple constructed objects */
         public override bool Equals(object obj)
         {
+            /* Precondition - Requires the object to not be null */
+            Contract.Requires(obj != null);
             /* Define item as variable to represent the object */
             var item = obj as BankAccount;
-            /* If object is null return false */
-            if (item == null)
-            {
-                return false;
-            }
-            /* Otherwise compare objects balance */
+            /* Return the balance comparison of the 2 objects */
             return this.Balance.Equals(item.Balance);
         }
         /* Override the GetHashCode method which is required to override the Equals method */

@@ -1,0 +1,17 @@
+C:\Users\rthomas\source\repos\school\assignment3_VS\assignment3\assignment3\obj\Debug\netcoreapp2.1\assignment3.csprojAssemblyReference.cache
+C:\Users\rthomas\source\repos\school\assignment3_VS\assignment3\assignment3\obj\Debug\netcoreapp2.1\assignment3.csproj.CoreCompileInputs.cache
+C:\Users\rthomas\source\repos\school\assignment3_VS\assignment3\assignment3\obj\Debug\netcoreapp2.1\assignment3.AssemblyInfoInputs.cache
+C:\Users\rthomas\source\repos\school\assignment3_VS\assignment3\assignment3\obj\Debug\netcoreapp2.1\assignment3.AssemblyInfo.cs
+C:\Users\rthomas\source\repos\school\assignment3_VS\assignment3\assignment3\bin\Debug\netcoreapp2.1\assignment3.deps.json
+C:\Users\rthomas\source\repos\school\assignment3_VS\assignment3\assignment3\bin\Debug\netcoreapp2.1\assignment3.runtimeconfig.json
+C:\Users\rthomas\source\repos\school\assignment3_VS\assignment3\assignment3\bin\Debug\netcoreapp2.1\assignment3.runtimeconfig.dev.json
+C:\Users\rthomas\source\repos\school\assignment3_VS\assignment3\assignment3\bin\Debug\netcoreapp2.1\assignment3.dll
+C:\Users\rthomas\source\repos\school\assignment3_VS\assignment3\assignment3\bin\Debug\netcoreapp2.1\assignment3.pdb
+C:\Users\rthomas\source\repos\school\assignment3_VS\assignment3\assignment3\obj\Debug\netcoreapp2.1\assignment3.dll
+C:\Users\rthomas\source\repos\school\assignment3_VS\assignment3\assignment3\obj\Debug\netcoreapp2.1\assignment3.pdb
+C:\Users\rthomas\source\repos\school\assignment3_VS\assignment3\assignment3\bin\Debug\netcoreapp2.1\CodeContracts\assignment3.Contracts.dll
+C:\Users\rthomas\source\repos\school\assignment3_VS\assignment3\assignment3\bin\Debug\netcoreapp2.1\CodeContracts\assignment3.Contracts.pdb
+C:\Users\rthomas\source\repos\school\assignment3_VS\assignment3\assignment3\obj\Debug\netcoreapp2.1\Decl\assignment3.dll
+C:\Users\rthomas\source\repos\school\assignment3_VS\assignment3\assignment3\obj\Debug\netcoreapp2.1\Decl\assignment3.pdb
+C:\Users\rthomas\source\repos\school\assignment3_VS\assignment3\assignment3\obj\Debug\netcoreapp2.1\assignment3ccrefgen.rsp
+C:\Users\rthomas\source\repos\school\assignment3_VS\assignment3\assignment3\obj\Debug\netcoreapp2.1\CodeContractAnalysisRun.log
