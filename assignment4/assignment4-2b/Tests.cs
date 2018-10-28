@@ -8,7 +8,7 @@ namespace assignment4 {
         public void testFindTrue () {
             Program program = new Program ();
             program.Item = new int[] { 1, 2, 3, 4, 5, 6 };
-            bool result = program.find (2);
+            bool result = program.Find (2);
             Assert.That (result == true);
         }
 
@@ -16,7 +16,7 @@ namespace assignment4 {
         public void testFindFalse () {
             Program program = new Program ();
             program.Item = new int[] { 1, 2, 3, 4, 5, 6 };
-            bool result = program.find (11);
+            bool result = program.Find (11);
             Assert.That (result == false);
         }
     }
