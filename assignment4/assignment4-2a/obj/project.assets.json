@@ -687,11 +687,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rthomas\\source\\repos\\school\\assignment\\assignment4-2a\\assignment4-2a.csproj",
+      "projectUniqueName": "c:\\Users\\rthomas\\source\\repos\\school\\assignment4\\assignment4-2a\\assignment4-2a.csproj",
       "projectName": "assignment4-2a",
-      "projectPath": "C:\\Users\\rthomas\\source\\repos\\school\\assignment\\assignment4-2a\\assignment4-2a.csproj",
+      "projectPath": "c:\\Users\\rthomas\\source\\repos\\school\\assignment4\\assignment4-2a\\assignment4-2a.csproj",
       "packagesPath": "C:\\Users\\rthomas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rthomas\\source\\repos\\school\\assignment\\assignment4-2a\\obj\\",
+      "outputPath": "c:\\Users\\rthomas\\source\\repos\\school\\assignment4\\assignment4-2a\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
