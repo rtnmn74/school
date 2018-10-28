@@ -9,3 +9,14 @@ C:\Users\rthomas\source\repos\school\assignment\assignment4-2a\obj\Debug\netcore
 C:\Users\rthomas\source\repos\school\assignment\assignment4-2a\obj\Debug\netcoreapp2.1\assignment4-2a.AssemblyInfo.cs
 C:\Users\rthomas\source\repos\school\assignment\assignment4-2a\obj\Debug\netcoreapp2.1\assignment4-2a.dll
 C:\Users\rthomas\source\repos\school\assignment\assignment4-2a\obj\Debug\netcoreapp2.1\assignment4-2a.pdb
+c:\Users\rthomas\source\repos\school\assignment4\assignment4-2a\bin\Debug\netcoreapp2.1\assignment4-2a.deps.json
+c:\Users\rthomas\source\repos\school\assignment4\assignment4-2a\bin\Debug\netcoreapp2.1\assignment4-2a.runtimeconfig.json
+c:\Users\rthomas\source\repos\school\assignment4\assignment4-2a\bin\Debug\netcoreapp2.1\assignment4-2a.runtimeconfig.dev.json
+c:\Users\rthomas\source\repos\school\assignment4\assignment4-2a\bin\Debug\netcoreapp2.1\assignment4-2a.dll
+c:\Users\rthomas\source\repos\school\assignment4\assignment4-2a\bin\Debug\netcoreapp2.1\assignment4-2a.pdb
+c:\Users\rthomas\source\repos\school\assignment4\assignment4-2a\obj\Debug\netcoreapp2.1\assignment4-2a.csprojAssemblyReference.cache
+c:\Users\rthomas\source\repos\school\assignment4\assignment4-2a\obj\Debug\netcoreapp2.1\assignment4-2a.csproj.CoreCompileInputs.cache
+c:\Users\rthomas\source\repos\school\assignment4\assignment4-2a\obj\Debug\netcoreapp2.1\assignment4-2a.AssemblyInfoInputs.cache
+c:\Users\rthomas\source\repos\school\assignment4\assignment4-2a\obj\Debug\netcoreapp2.1\assignment4-2a.AssemblyInfo.cs
+c:\Users\rthomas\source\repos\school\assignment4\assignment4-2a\obj\Debug\netcoreapp2.1\assignment4-2a.dll
+c:\Users\rthomas\source\repos\school\assignment4\assignment4-2a\obj\Debug\netcoreapp2.1\assignment4-2a.pdb
