@@ -13,14 +13,14 @@ namespace Program {
             /*Set Item array to a large range from 1 to 111111500  */
             program.Item = Enumerable.Range (1, 111111500).ToArray ();
             /*Input a test value into the find method */
-            program.find (1123451);
+            program.Find (1123451);
         }
         //*Define item array */
         int[] item;
         //*Define property for item array */
         public int[] Item { get; set; }
         //*Method to find a number in a the Item array where testValue is the number to find */
-        public bool find (int testValue) {
+        public bool Find (int testValue) {
             //*Stopwatch timer to measure find method performance */
             Stopwatch stopwatch = new Stopwatch ();
             //*Start stopwatch timer */
