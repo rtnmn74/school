@@ -17,7 +17,7 @@ namespace Program {
         }
         //*Define item array */
         int[] item;
-        //*Define property for item arrary */
+        //*Define property for item array */
         public int[] Item { get; set; }
         //*Method to find a number in a the Item array where testValue is the number to find */
         public bool find (int testValue) {
@@ -27,23 +27,23 @@ namespace Program {
             stopwatch.Start ();
             //*Set Boolean variable found with a starting value of false */
             bool found = false;
-            //*Set loop count variable i with a starting value of 0  */
-            int i = 0;
+            //*Set loop count variable itemIndex with a starting value of 0  */
+            int itemIndex = 0;
             //*While testValue not found and loop count less than Item array length compare item array element with testValue */
-            while ((!found) && (i < Item.Length)) {
+            while ((!found) && (itemIndex < Item.Length)) {
                 //*Compare item array element with testValue */
-                if (Item[i] == testValue)
+                if (Item[itemIndex] == testValue)
                     //*If match then set Boolean variable found as true */
                     found = true;
-                //*If no match continue loop until found or false finished looping through array  */    
+                //*If no match continue loop until found or found value is false when finished looping through array  */    
                 else
-                    i++;
+                    itemIndex++;
             }
             //*Stop stopwatch timer */
             stopwatch.Stop ();
             //*Write stopwatch time to console in milliseconds */
             Console.WriteLine ("Time elapsed: {0}", stopwatch.ElapsedMilliseconds);
-            //*Return found varialble value true or false */
+            //*Return found variable value true or false */
             return found;
 
         }
