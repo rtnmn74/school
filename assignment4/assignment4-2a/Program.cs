@@ -25,17 +25,17 @@ namespace Program {
             Stopwatch stopwatch = new Stopwatch ();
             //*Start stopwatch timer */
             stopwatch.Start ();
-            //*Set boolean variable found with a starting value of false */
+            //*Set Boolean variable found with a starting value of false */
             bool found = false;
             //*Set loop count variable i with a starting value of 0  */
             int i = 0;
-            //*While testValue not found and loop count less than Item array total length compare item array value with testValue */
+            //*While testValue not found and loop count less than Item array length compare item array element with testValue */
             while ((!found) && (i < Item.Length)) {
-                //*Compare item array value with testValue */
+                //*Compare item array element with testValue */
                 if (Item[i] == testValue)
-                    //*If match then set boolean variable found as true */
+                    //*If match then set Boolean variable found as true */
                     found = true;
-                //*If no match continue loop until found or finished looping through array then false  */    
+                //*If no match continue loop until found or false finished looping through array  */    
                 else
                     i++;
             }
